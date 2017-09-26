@@ -1,0 +1,6 @@
+{
+  "name": "SearchTree",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./SearchTree.js"
+}

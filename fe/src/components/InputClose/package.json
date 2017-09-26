@@ -1,0 +1,7 @@
+{
+  "name": "InputClose",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./InputClose.js",
+  "description": "拓展原生 Input，添加 autoClear"
+}

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE generatorConfiguration PUBLIC
+        "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd" >
+<generatorConfiguration>
+
+  <!-- !!!! Driver Class Path !!!! -->
+  <classPathEntry location="~/.m2/repository/mysql/mysql-connector-java/5.1.40/mysql-connector-java-5.1.40.jar" />
+
+  <context id="context" targetRuntime="MyBatis3">
+    <commentGenerator>
+      <!-- !!!! 不生成注释 !!!! -->
+      <property name="suppressAllComments" value="true" />
+      <property name="suppressDate" value="true" />
+    </commentGenerator>
+
+    <!-- !!!! Database Configurations !!!! -->
+    <jdbcConnection driverClass="com.mysql.jdbc.Driver" connectionURL="jdbc:mysql://localhost:3306/aas_db" userId="root" password="dota8888" />
+
+    <javaTypeResolver>
+      <property name="forceBigDecimals" value="false" />
+    </javaTypeResolver>
+
+    <!-- !!!! Model Configurations !!!! -->
+    <javaModelGenerator targetPackage="me.hrps.aas.web.sys.domain" targetProject="src/main/java">
+      <property name="enableSubPackages" value="false" />
+      <property name="trimStrings" value="true" />
+    </javaModelGenerator>
+
+    <!-- !!!! Mapper XML Configurations !!!! -->
+    <sqlMapGenerator targetPackage="mybatis" targetProject="src/main/resources">
+      <property name="enableSubPackages" value="false" />
+    </sqlMapGenerator>
+
+    <!-- !!!! Mapper Interface Configurations !!!! -->
+    <javaClientGenerator targetPackage="me.hrps.aas.web.sys.mapper" targetProject="src/main/java" type="XMLMAPPER">
+      <property name="enableSubPackages" value="false" />
+    </javaClientGenerator>
+
+    <!-- !!!! Table Configurations !!!! -->
+    <table tableName="sys_role"
+            enableInsert="true"
+            enableCountByExample="true"
+            enableDeleteByExample="true" enableDeleteByPrimaryKey="true"
+            enableUpdateByExample="true" enableUpdateByPrimaryKey="true"
+            enableSelectByExample="true" enableSelectByPrimaryKey="true">
+      <!--<generatedKey column="id" sqlStatement="select sys_role_seq.nextval from dual"/>-->
+      <columnOverride column="CREATE_TIME" jdbcType="TIMESTAMP" />
+      <columnOverride column="UPDATE_TIME" jdbcType="TIMESTAMP" />
+      <!--默认是Date类型(年月日)，如果需要时间戳类型需要自定义-->
+    </table>
+
+  </context>
+</generatorConfiguration>

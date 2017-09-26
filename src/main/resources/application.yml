@@ -1,0 +1,33 @@
+spring:
+  datasource:
+    driver-class-name:  com.mysql.jdbc.Driver
+    druid:
+      filters: wall,stat,slf4j
+      poolPreparedStatements: true
+      stat-view-servlet:
+        login-username: hello
+        login-password: hello
+  mvc:
+    static-path-pattern: /static/**
+  profiles:
+    active: development
+server:
+  port: 7000
+  session:
+    timeout: 1800
+mybatis:
+  mapper-locations: classpath:/mybatis/**/*Mapper.xml
+pagehelper:
+  support-methods-arguments: true
+  params: pageNum=page
+
+--- # 开发配置
+spring:
+  profiles: development
+  datasource:
+    url: jdbc:mysql://localhost:3306/aas_db?useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&allowMultiQueries=true&useSSL=false
+    username: root
+    password: 123456
+  resources:
+    chain:
+      gzipped: true

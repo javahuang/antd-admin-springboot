@@ -1,0 +1,58 @@
+
+.form {
+  border-radius: 4px;
+  background-color: rgba(25, 48, 65, 0.54);
+  position: absolute;
+  top: 50%;
+  right: 120px;
+  margin: -160px 0 0 -160px;
+  width: 320px;
+  height: 320px;
+  padding: 36px;
+  box-shadow: 0 0 100px rgba(0, 0, 0, .08);
+
+  button {
+    width: 100%;
+  }
+
+  p {
+    color: rgb(204, 204, 204);
+    text-align: center;
+    margin-top: 16px;
+
+    span {
+      &:first-child {
+        margin-right: 16px;
+      }
+    }
+  }
+
+  :global {
+    .ant-tabs .ant-tabs-nav {
+      width: 100% !important;
+
+      div {
+        color: #ded4d4;
+        width: 50%;
+      }
+
+    }
+  }
+}
+
+.ant-spin-container,
+.ant-spin-nested-loading {
+  height: 100%;
+}
+
+.tab {
+  text-align: center;
+}
+
+.color {
+  color: #ded4d4;
+}
+
+.bgImage {
+  background: url("../../public/bg_image.jpg") round;
+}

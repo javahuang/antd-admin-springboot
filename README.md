@@ -10,10 +10,16 @@
 
 演示地址 <http://114.215.47.214:8080/>
 
+admin/hello，请不要修改管理员账号的密码。
+
 ## 特性
 
 - 前端基于最新版本的 [antd-admin](https://github.com/zuiidea/antd-admin)
-- 后端基于 springboot，同时整合了 shiro、mybatis
+- 后端基于 springboot，同时整合了 shiro、mybatis，数据库使用的 mysql
+    * 后端添加了自动分页插件
+    * 基于 shiro 的 RBAC 权限控制，能动态配置菜单、角色、权限等
+    * 统一异常处理
+    * ...
 - 开发、部署简单，能实现前后端同时开发且无需额外修改配置
 
 

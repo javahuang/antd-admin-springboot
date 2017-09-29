@@ -3,7 +3,9 @@
 [![React](https://img.shields.io/badge/react-^15.6.1-brightgreen.svg?style=flat-square)](https://github.com/facebook/react)
 [![Ant Design](https://img.shields.io/badge/ant--design-^2.11.2-yellowgreen.svg?style=flat-square)](https://github.com/ant-design/ant-design)
 [![dva](https://img.shields.io/badge/dva-^2.0.1-orange.svg?style=flat-square)](https://github.com/dvajs/dva)
+[![](https://img.shields.io/badge/spring--boot-1.5.3.RELEASE-green.svg)](https://github.com/spring-projects/spring-boot)
 
+[![](https://img.shields.io/github/issues/javahuang/antd-admin-springboot.svg)](https://github.com/javahuang/antd-admin-springboot/issues)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](https://github.com/javahuang/antd-admin-springboot/pulls)
 [![MIT](https://img.shields.io/dub/l/vibe-d.svg?style=flat-square)](http://opensource.org/licenses/MIT)
 [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com)
@@ -18,12 +20,12 @@ admin/hello，请不要修改管理员账号的密码。
 
 - 前端基于最新版本的 [antd-admin](https://github.com/zuiidea/antd-admin)
 - 后端基于 springboot，同时整合了 shiro、mybatis，数据库使用的 mysql
-    * 后端添加了自动分页插件
-    * 基于 shiro 的 RBAC 权限控制，能动态配置菜单、角色、权限等(用户对应角色(1对多)，角色对应权限(1对多)，菜单对应权限(1对1))
-    * 统一异常处理及返回数据统一封装
-    * 遵循 RESTful api
-    * ...
+- 后端添加了自动分页插件
+- 基于 shiro 的 RBAC 权限控制，能动态配置菜单、             角色、权限等(用户对应角色(1对多)，角色对应权限(1对多)，菜单对应权限(1对1))
+- 统一异常处理及返回数据统一封装
+- 后端 RESTful api 设计
 - 开发、部署简单，能实现前后端同时开发且无需额外修改配置
+- ...
 
 
 ### 目录结构
